@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "227341863889",
+    "project_id": "servappbackend",
+    "storage_bucket": "servappbackend.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227341863889:android:be107e7361c79c947e6ef0",
+        "android_client_info": {
+          "package_name": "com.serv.serv_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_e9D6Kfp8_2uY0VY6Q-k6AxrR5YkMH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

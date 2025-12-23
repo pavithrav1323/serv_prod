@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="SERV App">
+
+  <!-- Use HTML renderer for platform views like Google Maps -->
+  <meta name="flutter-web-renderer" content="html" />
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="serv_app">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>serv_app</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Maps JavaScript API (best practice: loading=async) -->
+  <!-- Replace key=keyI with your real web API key -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdlqOlxgqLHaeiT43_rWd2p2XWbPloBAI&libraries=places&v=weekly&loading=async"
+    async
+    defer
+  ></script>
+</head>
+<body>
+  <!-- PDF.js -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs" type="module"></script>
+  <script type="module">
+    var { pdfjsLib } = globalThis;
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs';
+    var pdfRenderOptions = {
+      cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/',
+      cMapPacked: true,
+    };
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

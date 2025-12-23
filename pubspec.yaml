@@ -1,0 +1,138 @@
+name: serv_app
+description: "A new Flutter project."
+publish_to: "none"
+
+version: 0.1.1+2
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & System packages
+  cupertino_icons: ^1.0.8
+  flutter_spinkit: ^5.2.0
+  table_calendar: ^3.0.9
+  image_picker: ^1.0.4
+  image_picker_web: ^4.0.0
+  file_picker: ^10.2.0
+  open_filex: ^4.7.0
+
+  # --- FlutterFire ---
+  firebase_core: ^4.0.0
+  cloud_firestore: ^6.0.0
+  firebase_storage: ^13.0.0
+  firebase_auth: ^6.0.0
+
+  # Align with local_auth_ios constraints
+  intl: ^0.18.1
+
+  google_maps_flutter: ^2.13.1
+  intl_phone_field: ^3.2.0
+  permission_handler: ^12.0.1
+  universal_io: ^2.2.2
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.1
+  http: ^1.4.0
+  geolocator: ^14.0.2
+  url_launcher: ^6.2.1
+  google_fonts: ^6.2.1
+
+
+  # Storage/paths/JWT
+  path_provider: ^2.0.12
+  path: ^1.8.0
+  jwt_decoder: ^2.0.1
+  gal: ^2.3.2
+
+  # Preferences & file generation
+  shared_preferences: ^2.5.3
+  shared_preferences_web: ^2.3.0
+  excel: ^4.0.6
+  pdfx: ^2.9.2
+  file_saver: ^0.3.1
+
+  # Biometric auth
+  local_auth: ^2.2.0
+  local_auth_ios: ^1.1.7
+  google_maps_flutter_web: ^0.5.14+2
+
+  # ✅ Backgrounds
+  workmanager: ^0.9.0+3
+  geocoding: ^4.0.0
+
+  # ✅ NEW: real foreground service + battery settings + Android 13 notif permission
+  flutter_background_service: ^5.0.6
+  flutter_background_service_android: ^6.2.2
+  # For opening Battery Optimization / Settings screens
+  android_intent_plus: ^5.0.2
+
+  # Status-bar notification for the foreground service (Android 13+ permission too)
+  flutter_local_notifications: ^19.4.2
+  connectivity_plus: ^6.0.5
+  internet_connection_checker_plus: ^2.3.0
+  share_plus: ^12.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter_launcher_icons:
+  # Generate icons for both platforms
+  android: "ic_launcher"
+  ios: true
+
+  min_sdk_android: 21
+
+  # Base image used by iOS and as a fallback
+  image_path: "assets/images/splash_logo.png"
+
+  # Adaptive icons (Android 8+)
+  adaptive_icon_foreground: "assets/images/splash2.jpg"
+  adaptive_icon_background: "#FFFFFF"
+
+# Splash screen configuration
+flutter_native_splash:
+  # Basic settings
+  color: "#FFFFFF"            # BLACK background (changed)
+  color_dark: "#FFFFFF"       # BLACK in dark mode (changed)
+  
+  # Image settings
+  image: assets/images/splash_logo.png
+  android: true
+  android_gravity: center
+  fullscreen: false
+  
+  # Android 12+ specific settings
+  android_12:
+    image: assets/images/splash_logo.png
+    icon_background_color: "#FFFFFF"   # BLACK behind icon (changed)
+    android_gravity: center
+    
+  # iOS settings
+  ios: true
+  ios_content_mode: center
+  
+  # Web settings (disable if not needed)
+  web: false
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_28pt-Regular.ttf
+        - asset: assets/fonts/Inter_28pt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter_28pt-Italic.ttf
+          style: italic
