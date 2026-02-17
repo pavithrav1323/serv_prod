@@ -1,44 +1,79 @@
 # SERV – Workforce Management & Attendance System
 
-SERV is a workforce management application that helps organizations manage employee attendance, Location tracking, leave/requests, and admin operations through a single system. It supports both biometric/manual attendance workflows and provides admin dashboards for approvals and monitoring.
+**SERV** is a full-stack workforce management application designed to help organizations efficiently manage employee attendance, real-time location tracking, leave and request workflows, and administrative operations through a unified digital platform.
 
-## Key Features
-- Employee login and admin login
-- Attendance: check-in/check-out (manual + biometric support if enabled)
-- My Attendance: calendar view with present/absent/leave/holiday
-- My Track: employee location/activity tracking with history
-- My Request: submit and view employee requests (Pending/Approved/Rejected)
-- Admin: employee creation and management
-- Admin: leave/request approvals with status filters
-- Shift management
+The system supports both **manual and biometric attendance workflows** and provides **role-based dashboards** for monitoring, approvals, and operational control.
 
-## Tech Stack
-**Frontend:** Flutter (Mobile/Web)  
-**Backend:** Node.js + Express  
+---
+
+## Core Features
+
+- Secure **Employee** and **Admin** authentication  
+- **Attendance Management** with check-in and check-out tracking  
+- **My Attendance Calendar** displaying present, absent, leave, and holidays  
+- **Real-time Location Tracking** with historical activity logs  
+- **Employee Request Management** with Pending / Approved / Rejected status  
+- **Admin Dashboard** for employee creation and lifecycle management  
+- **Leave & Request Approval Workflow** with filters and status control  
+- **Shift Management Module** for flexible workforce scheduling  
+
+---
+
+## Technology Stack
+
+**Frontend:** Flutter (Mobile & Web)  
+**Backend:** Node.js with Express.js  
 **Database:** Firebase Firestore  
-**Storage:** Firebase Storage (if used for uploads)  
-**Auth:** Custom backend auth / Firebase Admin SDK (based on your implementation)
+**File Storage:** Firebase Storage (for images and uploads)  
+**Authentication:** Firebase Admin SDK / Custom JWT-based authentication  
 
-## Project Structure
+---
+
+## Project Architecture
+
 SERV/
 │
-├── backend/ # Node.js + Express API
-│ ├── controllers/ # Business logic
-│ ├── routes/ # API routes
-│ ├── config/ # Firebase & environment setup
-│ ├── middleware/ # Authentication & validation
+├── backend/ # Node.js + Express REST APIs
+│ ├── controllers/ # Business logic layer
+│ ├── routes/ # API route definitions
+│ ├── config/ # Firebase & environment configuration
+│ ├── middleware/ # Authentication and validation
 │ ├── package.json
 │ └── app.js
 │
-├── flutter_application_1/ # Flutter frontend
+├── flutter_application_1/ # Flutter frontend (mobile & web)
 │ ├── lib/
-│ │ ├── screens/ # UI pages
+│ │ ├── screens/ # UI screens
 │ │ ├── models/ # Data models
-│ │ ├── services/ # API integration
+│ │ ├── services/ # API integration layer
 │ │ └── main.dart
 │ ├── assets/
 │ └── pubspec.yaml
 │
-├── screenshots/ # Application UI screenshots
+├── screenshots/ # Application UI preview images
 ├── README.md # Project documentation
 └── .gitignore
+
+
+---
+
+## Application Screenshots
+ Login Screen
+ Attendance Page
+ Location Tracking
+ Admin Approval Panel
+ Admin Tracking Page
+ Home Page
+
+ 
+
+---
+
+## Setup & Installation Guide
+
+### 1. Backend Setup
+
+```bash
+cd backend
+npm install
+npm start
